@@ -12,10 +12,13 @@ app.use(bodyParser());
 const cors = require("cors");
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://temple-ticket-booking-client.vercel.app",
     credentials: true,
   })
 );
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.use("/user", userRoutes);
 app.use("/buy_ticket", ticketRoutes);
