@@ -5,6 +5,7 @@ const userRoutes = require("./routes/userRoutes");
 const ticketRoutes = require("./routes/ticketRoutes");
 
 // for accepting post form data
+
 const bodyParser = require("express").json;
 app.use(bodyParser());
 

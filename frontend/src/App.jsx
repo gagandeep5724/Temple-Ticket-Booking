@@ -8,8 +8,10 @@ import About from './components/About';
 import Contact from './components/Contact';
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import Tickets from './components/My_Tickets';
 
 // styles
+
 import './App.css';
 
 function App() {
@@ -23,18 +25,24 @@ function App() {
             <OurGoals />
             <About />
             <Contact />
+            <Tickets />
           </>
         } />
+
         <Route path="/signin" element={
           <div className="flex justify-center items-center min-h-screen gradient font-regular">
             <SignIn />
           </div>
         } />
+
         <Route path="/signup" element={
           <div className="flex justify-center items-center min-h-screen gradient font-regular">
             <SignUp />
-          </div>} />
+          </div>
+        } />
+
         <Route path="*" element={<Navigate to="/" />} />
+
       </Routes>
     </>
   )
